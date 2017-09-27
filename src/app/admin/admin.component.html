@@ -1,3 +1,42 @@
-<p>
-  admin works!
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Project to Database</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Project Name:</label>
+        <br>
+        <input #newName>
+      </div>
+
+      <div>
+        <label>Goal:</label>
+        <br>
+        <input #newTotalGoal>
+      </div>
+
+      <div>
+        <label>Description:</label>
+        <br>
+        <textarea #newDescription></textarea>
+      </div>
+      <div>
+          <label>Rewards:</label>
+          <br>
+          <textarea #newRewards></textarea>
+      </div>
+      <div>
+          <label>Image:</label>
+          <br>
+          <textarea #newImage></textarea>
+      </div>
+
+      <button (click)="submitForm(newName.value, newDescription.value, newTotalGoal.value, 0,newImage.value, newRewards.value);
+        newName.value  = '';
+        newDescription.value = '';
+        newTotalGoal.value = '';
+        newImage.value = '';
+        newRewards.value = ''">Add</button>
+  </div>
+</div>
